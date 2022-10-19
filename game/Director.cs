@@ -7,6 +7,20 @@ namespace Lab03.Game
     {
         public void StartGame()
         {
+            getInputs();
+            doUpdates();
+            doOutputs();
+        }
+        public void getInputs()
+        {
+
+        }
+        public void doUpdates()
+        {
+
+        }
+        public void doOutputs()
+        {
 
         }
     }
