@@ -5,16 +5,16 @@ namespace Lab03.Game
 {
     public class Jumper
     {
-        public int life_points = 4;
+        int life_points = 4;
         int _points;
-        public Jumper()
+        private Jumper()
         {
         }
-        public void points_updates(int score)
+        private void points_updates(int score)
         {
             _points = life_points + score;
         }
-        public void draw()
+        private void draw()
         {
             if (_points!=0)
             {
