@@ -11,5 +11,7 @@ namespace Lab03.Game
         Random rand = new Random();
 
         int index = rand.Next(words.Length);
+
+        string word = words[index];
     }
 }
