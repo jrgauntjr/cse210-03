@@ -2,6 +2,8 @@ using System;
 
 using System.Collections.Generic;
 
+using Random;
+
 namespace Lab03.Game
 {
     public class Services {
