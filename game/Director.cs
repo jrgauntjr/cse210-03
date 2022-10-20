@@ -7,6 +7,14 @@ namespace Lab03.Game
     {
         bool isPlaying = true;
         int score = 0;
+
+
+        public Director()
+        {
+            Jumper jumper = new Jumper();
+            jumper.points_updates(score);
+            jumper.draw();
+        }
         public void StartGame()
         {
             while (isPlaying==true)
@@ -18,8 +26,6 @@ namespace Lab03.Game
         }
         public void getInputs()
         {
-            Jumper jumper = new Jumper();
-            jumper.draw();
             Console.Write("Guess a letter [a-z]: ");
             string choice = Console.ReadLine();
         }
@@ -29,6 +35,7 @@ namespace Lab03.Game
         }
         public void doOutputs()
         {
+            jumper.draw();
             if (score == 0)
             {
                 isPlaying = false;
