@@ -9,20 +9,22 @@ namespace Lab03.Game
     public class Services {
 
         public static void Main();
-        string[] words = { "calculator", "phone", "glasses", "pencil", "grape", "duck", "crawl", "parachute", "sphinx", "motherhood"};
 
-        Random rand = new Random();
+            string[] words = { "calculator", "phone", "glasses", "pencil", "grape", "duck", "crawl", "parachute", "sphinx", "motherhood"};
 
-        int index = rand.Next(words.Length);
+            Random rand = new Random();
+
+            int index = rand.Next(words.Length);
 
         
 
         
 
-    public string word() {
-        string word = words[index];
+            public string word() {
+             string word = words[index];
 
-        return word;
+             return word;
+    
     }
     }
 }
