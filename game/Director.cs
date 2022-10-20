@@ -13,7 +13,8 @@ namespace Lab03.Game
         }
         public void getInputs()
         {
-
+            Console.Write("Guess a letter [a-z]: ");
+            string choice = Console.ReadLine();
         }
         public void doUpdates()
         {
