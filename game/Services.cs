@@ -15,11 +15,11 @@ namespace Lab03.Game
         
 
         
-    }
 
     public string word() {
         string word = words[index];
 
         return word;
+    }
     }
 }
