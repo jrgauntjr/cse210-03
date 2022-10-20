@@ -5,14 +5,21 @@ namespace Lab03.Game
 {
     public class Director
     {
+        bool isPlaying = true;
+        int score = 0;
         public void StartGame()
         {
-            getInputs();
-            doUpdates();
-            doOutputs();
+            while (isPlaying==true)
+            {
+                getInputs();
+                doUpdates();
+                doOutputs();
+            }
         }
         public void getInputs()
         {
+            Jumper jumper = new Jumper();
+            jumper.draw();
             Console.Write("Guess a letter [a-z]: ");
             string choice = Console.ReadLine();
         }
