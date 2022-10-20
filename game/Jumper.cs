@@ -7,14 +7,14 @@ namespace Lab03.Game
     {
         int life_points = 4;
         int _points;
-        private Jumper()
+        public Jumper()
         {
         }
         private void points_updates(int score)
         {
             _points = life_points + score;
         }
-        private void draw()
+        public void draw()
         {
             if (_points!=0)
             {
