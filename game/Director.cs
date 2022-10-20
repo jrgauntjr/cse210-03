@@ -29,7 +29,10 @@ namespace Lab03.Game
         }
         public void doOutputs()
         {
-
+            if (score == 0)
+            {
+                isPlaying = false;
+            }
         }
     }
 }
