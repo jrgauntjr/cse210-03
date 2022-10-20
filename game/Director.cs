@@ -7,6 +7,21 @@ namespace Lab03.Game
     {
         public void StartGame()
         {
+            getInputs();
+            doUpdates();
+            doOutputs();
+        }
+        public void getInputs()
+        {
+            Console.Write("Guess a letter [a-z]: ");
+            string choice = Console.ReadLine();
+        }
+        public void doUpdates()
+        {
+
+        }
+        public void doOutputs()
+        {
 
         }
     }
