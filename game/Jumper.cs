@@ -10,7 +10,7 @@ namespace Lab03.Game
         public Jumper()
         {
         }
-        private void points_updates(int score)
+        public void points_updates(int score)
         {
             _points = life_points + score;
         }
