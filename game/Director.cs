@@ -7,16 +7,17 @@ namespace Lab03.Game
     {
         bool isPlaying = true;
         int score = 0;
-
+        Jumper jumperDefult = new Jumper();
 
         public Director()
         {
-            Jumper jumper = new Jumper();
-            jumper.points_updates(score);
-            jumper.draw();
+            jumperDefult.points_updates(score);
+            jumperDefult.draw();
         }
         public void StartGame()
         {
+            jumperDefult.points_updates(score);
+            jumperDefult.draw();
             while (isPlaying==true)
             {
                 getInputs();
@@ -31,11 +32,12 @@ namespace Lab03.Game
         }
         public void doUpdates()
         {
-
         }
         public void doOutputs()
         {
-            jumper.draw();
+            jumperDefult.points_updates(score);
+            jumperDefult.draw();
+
             if (score == 0)
             {
                 isPlaying = false;

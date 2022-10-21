@@ -2,13 +2,13 @@ using System;
 
 using System.Collections.Generic;
 
-using Random;
 
 namespace Lab03.Game
 {
     public class Services {
 
-        public static void Main();
+        public string getWord()
+        {
 
             string[] words = { "calculator", "phone", "glasses", "pencil", "grape", "duck", "crawl", "parachute", "sphinx", "motherhood"};
 
@@ -16,15 +16,10 @@ namespace Lab03.Game
 
             int index = rand.Next(words.Length);
 
-        
+            string word = words[index];
 
-        
-
-            public string word() {
-             string word = words[index];
-
-             return word;
+            return word;
     
-    }
+        }
     }
 }
