@@ -9,6 +9,7 @@ namespace Lab03.Game
         int score = 0;
         Jumper jumperDefult = new Jumper();
         Guesser guess = new Guesser();
+        char choice;
 
         public Director()
         {
@@ -19,13 +20,12 @@ namespace Lab03.Game
         {
             jumperDefult.points_updates(score);
             jumperDefult.draw();
-            char[] word = guess.wordinarray();
-            guess.Blanks(word);
+            guess.wordinarray();
             
             while (isPlaying==true)
             {
-                char action = getInputs();
-                doUpdates(action, word);
+                choice = getInputs();
+                doUpdates(choice);
                 doOutputs();
             }
         }
@@ -37,9 +37,9 @@ namespace Lab03.Game
 
             return choiceChar;
         }
-        public void doUpdates(char choice, char[] word)
+        public void doUpdates(char choice)
         {
-           bool stat_flag = guess.CheckLetter(choice, word);
+           bool stat_flag = guess.CheckLetter(choice);
         
         }
         public void doOutputs()

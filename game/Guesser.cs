@@ -6,25 +6,22 @@ namespace Lab03.Game
     public class Guesser
     {
         Services service = new Services();
-        public char[] wordinarray(){
+        char[] word;
+        char[] arrayBlanks = {'_'};
+        public void wordinarray(){
             string ChosenWord = service.getWord();
-            char[] word = ChosenWord.ToCharArray();
-
-            return word;
-        }
-        char[] arrayBlanks;
-        List<char> badLetters = new List<char>();
-        public char[] Blanks(char[] word)
-        {
+            this.word = ChosenWord.ToCharArray();
 
             for ( int runs = 0; runs< word.Length; runs ++ )
             {
-                arrayBlanks[runs] = '_';
+                arrayBlanks[] = '_';
             }
-            return arrayBlanks;
+            
+            Console.WriteLine(arrayBlanks);
         }
+        List<char> badLetters = new List<char>();
 
-        public bool CheckLetter (char letter, char[] word)
+        public bool CheckLetter (char letter)
         {
 
             bool stat_flag = false;
