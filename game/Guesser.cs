@@ -6,7 +6,6 @@ namespace Lab03.Game
     public class Guesser
     {
         Services service = new Services();
-        string ChosenWord = service.getWord();
         char[] word = ChosenWord.ToCharArray();
         char[] arrayBlanks;
         List<char> badLetters = new List<char>();
