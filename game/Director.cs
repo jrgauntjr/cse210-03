@@ -8,6 +8,7 @@ namespace Lab03.Game
         bool isPlaying = true;
         int score = 0;
         Jumper jumperDefult = new Jumper();
+        Guesser guess = new Guesser();
 
         public Director()
         {
@@ -18,20 +19,28 @@ namespace Lab03.Game
         {
             jumperDefult.points_updates(score);
             jumperDefult.draw();
+            char[] word = guess.wordinarray();
+            guess.Blanks(word);
+            
             while (isPlaying==true)
             {
-                getInputs();
-                doUpdates();
+                char action = getInputs();
+                doUpdates(action, word);
                 doOutputs();
             }
         }
-        public void getInputs()
+        public char getInputs()
         {
             Console.Write("Guess a letter [a-z]: ");
             string choice = Console.ReadLine();
+            char choiceChar = char.Parse(choice);
+
+            return choiceChar;
         }
-        public void doUpdates()
+        public void doUpdates(char choice, char[] word)
         {
+           bool stat_flag = guess.CheckLetter(choice, word);
+            
         }
         public void doOutputs()
         {
