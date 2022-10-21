@@ -6,7 +6,12 @@ namespace Lab03.Game
     public class Guesser
     {
         Services service = new Services();
-        char[] word = ChosenWord.ToCharArray();
+        private char[] wordinarray(){
+            string ChosenWord = service.getWord();
+            char[] word = ChosenWord.ToCharArray();
+
+            return word;
+        }
         char[] arrayBlanks;
         List<char> badLetters = new List<char>();
         public char[] Blanks(char[] word)
@@ -19,7 +24,7 @@ namespace Lab03.Game
             return arrayBlanks;
         }
 
-        public bool CheckLetter (char letter)
+        public bool CheckLetter (char letter, char[] word)
         {
 
             bool stat_flag = false;
