@@ -7,6 +7,8 @@ namespace Lab03.Game
 {
     public class Services {
 
+        public Services(){}
+
         public string getWord()
         {
 
