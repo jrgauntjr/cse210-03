@@ -39,7 +39,7 @@ namespace Lab03.Game
         }
         public void doUpdates(char choice)
         {
-           bool stat_flag = guess.CheckLetter(choice);
+           bool stat_flag = guess.CheckLetter();
         
         }
         public void doOutputs()
