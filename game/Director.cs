@@ -7,6 +7,7 @@ namespace Lab03.Game
     {
         bool isPlaying = true;
         int score = 0;
+        int life = 4;
         Jumper jumperDefult = new Jumper();
         Guesser guess = new Guesser();
         char choice;
@@ -14,13 +15,14 @@ namespace Lab03.Game
         public Director()
         {
             jumperDefult.points_updates(score);
-            jumperDefult.draw();
+            // jumperDefult.draw();
         }
         public void StartGame()
         {
             jumperDefult.points_updates(score);
             jumperDefult.draw();
             guess.wordinarray();
+            
             
             while (isPlaying==true)
             {
@@ -31,23 +33,28 @@ namespace Lab03.Game
         }
         public char getInputs()
         {
-            Console.Write("Guess a letter [a-z]: ");
-            string choice = Console.ReadLine();
+            guess.printArray();
+            // Console.Write("Guess a letter [a-z]: ");
+            // string choice = Console.ReadLine();
+
+            string choice = "a"; // test letter 
             char choiceChar = char.Parse(choice);
 
             return choiceChar;
         }
         public void doUpdates(char choice)
         {
-           bool stat_flag = guess.CheckLetter();
+           bool stat_flag = guess.CheckLetter(choice);
         
         }
         public void doOutputs()
         {
             jumperDefult.points_updates(score);
+            guess.BadLetterPrint();
             jumperDefult.draw();
+            
 
-            if (score == 0)
+            if (life == 0)
             {
                 isPlaying = false;
             }

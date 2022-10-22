@@ -5,12 +5,13 @@ namespace Lab03.Game
 {
     public class Guesser
     {
+        List<char> badLetters = new List<char>();
         Services service = new Services();
         char[] word;
         List<char> charList = new List<char>();
 
 
-        public List<char> wordinarray(){
+        public void wordinarray(){
 
             string ChosenWord = service.getWord();
             this.word = ChosenWord.ToCharArray();
@@ -19,6 +20,10 @@ namespace Lab03.Game
             {
                 this.charList.Add('_');    
             }
+        }
+
+        public void printArray(){
+
 
             for (int runs = 0; runs<charList.Count; runs++ ){
 
@@ -28,14 +33,19 @@ namespace Lab03.Game
 
             Console.WriteLine();
 
-            return charList;
+        }
+
+        public void BadLetterPrint(){
+
+            for (int runs = 0; runs<badLetters.Count; runs++){
+
+            Console.Write("Wrong Guesses: " + badLetters[runs] + " " );
+
+            }
         }
 
 
-
-        List<char> badLetters = new List<char>();
-
-        public bool CheckLetter ()
+        public bool CheckLetter (char choice)
         {
             
             bool stat_flag = false;
@@ -46,12 +56,15 @@ namespace Lab03.Game
 
                 if (letter == word[runs])
                 {
-                    charList[runs] = letter;
+                    charList[runs] = choice;
                     stat_flag = true;
+                }
+                else if (letter == '_'){
+                    continue;
                 }
                 else
                 {
-                    badLetters.Add(letter);
+                    badLetters.Add(choice);
                 }
             }
             
