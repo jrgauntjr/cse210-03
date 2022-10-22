@@ -7,38 +7,54 @@ namespace Lab03.Game
     {
         Services service = new Services();
         char[] word;
-        char[] arrayBlanks = {'_'};
-        public void wordinarray(){
+        List<char> charList = new List<char>();
+
+
+        public List<char> wordinarray(){
+
             string ChosenWord = service.getWord();
             this.word = ChosenWord.ToCharArray();
 
             for ( int runs = 0; runs< word.Length; runs ++ )
             {
-                arrayBlanks[] = '_';
+                this.charList.Add('_');    
             }
-            
-            Console.WriteLine(arrayBlanks);
+
+            for (int runs = 0; runs<charList.Count; runs++ ){
+
+                Console.Write(charList[runs] + " ");
+
+            } 
+
+            Console.WriteLine();
+
+            return charList;
         }
+
+
+
         List<char> badLetters = new List<char>();
 
-        public bool CheckLetter (char letter)
+        public bool CheckLetter ()
         {
-
+            
             bool stat_flag = false;
+            int runs = 0;
 
-            for ( int runs = 0; runs< word.Length; runs ++)
+            foreach (var letter in charList)
             {
+
                 if (letter == word[runs])
                 {
-                    arrayBlanks[runs] = letter;
+                    charList[runs] = letter;
                     stat_flag = true;
                 }
                 else
                 {
                     badLetters.Add(letter);
                 }
-
             }
+            
             return stat_flag;
         }
 
