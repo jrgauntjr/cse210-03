@@ -16,8 +16,14 @@ namespace Lab03.Game
         }
         public void draw()
         {
+            if (_points < 4)
+                {
+                    Console.WriteLine(" ");
+                }
             if (_points!=0)
             {
+                
+                
                 for (int i = _points; i > 0;i = i-1 )
                 {
 
@@ -37,23 +43,21 @@ namespace Lab03.Game
                     {    
                         Console.WriteLine(@" \ /     ");
                     }
-                    
-
                 }
-                
                     Console.WriteLine("  0     ");
                     Console.WriteLine(@" /|\    ");
                     Console.WriteLine(@" / \     ");
+                    Console.WriteLine(@"^^^^^^^^^^");
             }
             else
             {
             Console.WriteLine("       X     ");
             Console.WriteLine(@"      /|\    ");
             Console.WriteLine(@"      / \     ");  
+            Console.WriteLine(@"^^^^^^^^^^^^^^^^^^^");
             Console.WriteLine("You lost the game"); 
             }
             
         }
     }
 }
-//yay

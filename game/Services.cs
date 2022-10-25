@@ -5,23 +5,16 @@ using System.Collections.Generic;
 
 namespace Lab03.Game
 {
-    public class Services {
-
-        public Services(){}
-
+    public class Services 
+    {
+        public string word1;
+        List<string> words = new List<string> (){"calculator", "phone", "glasses", "pencil", "grape", "duck", "crawl", "parachute", "sphinx", "motherhood"};
         public string getWord()
         {
-
-            string[] words = { "calculator", "phone", "glasses", "pencil", "grape", "duck", "crawl", "parachute", "sphinx", "motherhood"};
-
-            Random rand = new Random();
-
-            int index = rand.Next(words.Length);
-
-            string word = words[index];
-
-            return word;
-    
+            Random random = new Random();
+            int index = random.Next(words.Count);
+            word1 = words[index];
+            return word1;
         }
     }
 }
