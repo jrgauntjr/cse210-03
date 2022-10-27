@@ -120,6 +120,7 @@ namespace Lab03.Game
             }
             if (score == -4)
             {
+                Console.WriteLine($"The word was {ChosenWord}");
                 isPlaying = false;
             }
         }
