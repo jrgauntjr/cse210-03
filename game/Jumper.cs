@@ -4,6 +4,7 @@ using System.Collections.Generic;
 namespace Lab03.Game
 {
     public class Jumper
+    //This is a jumper class and has life_point veriable and save points in it.
     {
         int life_points = 4;
         int _points;
@@ -11,10 +12,13 @@ namespace Lab03.Game
         {
         }
         public void points_updates(int score)
+        //This function is to add the score
         {
             _points = life_points + score;
         }
         public void draw()
+        //This function is to draw under certain if statments conditions. 
+        //Also has for loop which decides how to draw in certain conditions. 
         {
             if (_points < 4)
                 {
